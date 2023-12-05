@@ -9,14 +9,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class CSSSelectors {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args)  {
 		// TODO Auto-generated method stub
+		
 		WebDriver driver = new ChromeDriver();
-		ChromeOptions options= new ChromeOptions();
-		options.setBrowserVersion("118");
 		driver.get("https://www.seleniumeasy.com/");
-		Thread.sleep(2000);
-		WebElement mainMenu = driver.findElement(By.cssSelector("ul.menu.nav.navbar-nav>li:nth-child(2"));
+		
+		WebElement mainMenu = driver.findElement(By.cssSelector("ul.menu.nav.navbar-nav>li:nth-child(3"));
 		mainMenu.click();
 	//comment
 
