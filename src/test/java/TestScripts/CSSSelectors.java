@@ -5,17 +5,19 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class CSSSelectors {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.google.com");
-		WebElement srcBox = driver.findElement(By.name("q"));
-		srcBox.sendKeys("learn selenium");
-		System.out.println("Title....."+driver.getTitle());
-		srcBox.sendKeys(Keys.ENTER);
+		ChromeOptions options= new ChromeOptions();
+		options.setBrowserVersion("118");
+		driver.get("https://www.seleniumeasy.com/");
+		Thread.sleep(2000);
+		WebElement mainMenu = driver.findElement(By.cssSelector("ul.menu.nav.navbar-nav>li:nth-child(2"));
+		mainMenu.click();
 	//comment
 
 		
